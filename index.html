@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Full 64-Bit Solar System Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars-parallax">
+        <div id="stars-back"></div>
+        <div id="stars-mid"></div>
+    </div>
+
+    <div class="ui-panel">
+        <h1>Solar System (64-Bit)</h1>
+        <div class="data">TIMESTAMP: <span id="timestamp">0</span></div>
+        <div class="data">DATE: <span id="date-display">Loading...</span></div>
+        <div class="controls">
+            <button onclick="jumpTo2038()">Jump to 2038</button>
+            <button id="glitch-btn" onclick="toggleGlitch()">Enable 32-bit Crash</button>
+        </div>
+        <p id="status-msg">Status: 64-bit Stable</p>
+    </div>
+
+    <div class="solar-system">
+        <div class="sun"></div>
+        
+        <!-- All 9 Orbits -->
+        <div class="orbit mercury-orbit"><div class="planet mercury"></div></div>
+        <div class="orbit venus-orbit"><div class="planet venus"></div></div>
+        <div class="orbit earth-orbit"><div class="planet earth"></div></div>
+        <div class="orbit mars-orbit"><div class="planet mars"></div></div>
+        <div class="orbit jupiter-orbit"><div class="planet jupiter"></div></div>
+        <div class="orbit saturn-orbit"><div class="planet saturn"><div class="rings"></div></div></div>
+        <div class="orbit uranus-orbit"><div class="planet uranus"></div></div>
+        <div class="orbit neptune-orbit"><div class="planet neptune"></div></div>
+        <div class="orbit pluto-orbit"><div class="planet pluto"></div></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
