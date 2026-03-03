@@ -1,9 +1,8 @@
-js
 // script4.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Audio Elements ---
-    const backgroundMusic = new Audio('audio/space_ambient.mp3'); // Path to your ambient sound
+    const backgroundMusic = new Audio('space.mp3'); // Path to your ambient sound
     // const clickSound = new Audio('audio/click_sfx.mp3'); // No longer needed if script5 handles all clicks
 
     // --- UI Elements for Sound Control ---
