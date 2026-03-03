@@ -1,3 +1,5 @@
+# For Education Purpose
+# Penetration Testing and Pen Testing only
 # solar-system
 🌌 64-Bit Solar System & The Y2K38 Crisis
 A Photorealistic Orbital Simulation & Logic Lab
