@@ -369,3 +369,691 @@ body, html {
     background: #4CAF50;
     cursor: pointer;
 }
+
+/* --- MOON HOLOGRAPHIC EFFECTS --- */
+.moon {
+    position: absolute;
+    top: 50%;
+    left: -6px; /* Position moon on orbit */
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #aaffff, #00ffff);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff50, 0 0 30px #00ffff30;
+    transform: translateY(-50%);
+    animation: moonOrbit 8s linear infinite; /* Default orbit speed */
+    z-index: 1;
+}
+
+/* Stagger moon speeds for each planet */
+.planet .moon:nth-child(1) { animation-duration: 5s; }
+.planet .moon:nth-child(2) { animation-duration: 7s; }
+.planet .moon:nth-child(3) { animation-duration: 9s; }
+.planet .moon:nth-child(4) { animation-duration: 11s; }
+.planet .moon:nth-child(5) { animation-duration: 13s; }
+
+/* Orbital radius adjustments for each planet's moons */
+.earth .moon { width: 6px; height: 6px; left: -20px; } /* Earth's single moon */
+.mars .moon:nth-child(1) { left: -14px; }
+.mars .moon:nth-child(2) { left: -22px; }
+.jupiter .moon:nth-child(1) { left: -20px; }
+.jupiter .moon:nth-child(2) { left: -28px; }
+.jupiter .moon:nth-child(3) { left: -36px; }
+.jupiter .moon:nth-child(4) { left: -44px; }
+.saturn .moon:nth-child(1) { left: -25px; }
+.saturn .moon:nth-child(2) { left: -35px; }
+.saturn .moon:nth-child(3) { left: -45px; }
+.uranus .moon:nth-child(1) { left: -18px; }
+.uranus .moon:nth-child(2) { left: -28px; }
+.neptune .moon:nth-child(1) { left: -20px; }
+.pluto .moon:nth-child(1) { left: -10px; }
+.pluto .moon:nth-child(2) { left: -16px; }
+.pluto .moon:nth-child(3) { left: -22px; }
+.pluto .moon:nth-child(4) { left: -28px; }
+.pluto .moon:nth-child(5) { left: -34px; }
+
+/* Holographic orbital animation */
+@keyframes moonOrbit {
+    from { transform: rotate(0deg) translateY(-50%) translateX(0px) rotate(0deg); }
+    to { transform: rotate(360deg) translateY(-50%) translateX(0px) rotate(-360deg); }
+}
+
+/* Glow intensifies when parent planet is zoomed */
+.planet.zoomed .moon {
+    box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff80, 0 0 40px #00ffff60;
+    transform: scale(1.5);
+    transition: all 0.3s ease-out;
+}
+
+/* --- MOON HOLOGRAPHIC EFFECTS --- */
+.moon {
+    position: absolute;
+    top: 50%;
+    left: -6px; /* Position moon on orbit */
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #aaffff, #00ffff);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff50, 0 0 30px #00ffff30;
+    transform: translateY(-50%);
+    animation: moonOrbit 8s linear infinite; /* Default orbit speed */
+    z-index: 1;
+}
+
+/* Stagger moon speeds for each planet */
+.planet .moon:nth-child(1) { animation-duration: 5s; }
+.planet .moon:nth-child(2) { animation-duration: 7s; }
+.planet .moon:nth-child(3) { animation-duration: 9s; }
+.planet .moon:nth-child(4) { animation-duration: 11s; }
+.planet .moon:nth-child(5) { animation-duration: 13s; }
+
+/* Orbital radius adjustments for each planet's moons */
+.earth .moon { width: 6px; height: 6px; left: -20px; } /* Earth's single moon */
+.mars .moon:nth-child(1) { left: -14px; }
+.mars .moon:nth-child(2) { left: -22px; }
+.jupiter .moon:nth-child(1) { left: -20px; }
+.jupiter .moon:nth-child(2) { left: -28px; }
+.jupiter .moon:nth-child(3) { left: -36px; }
+.jupiter .moon:nth-child(4) { left: -44px; }
+.saturn .moon:nth-child(1) { left: -25px; }
+.saturn .moon:nth-child(2) { left: -35px; }
+.saturn .moon:nth-child(3) { left: -45px; }
+.uranus .moon:nth-child(1) { left: -18px; }
+.uranus .moon:nth-child(2) { left: -28px; }
+.neptune .moon:nth-child(1) { left: -20px; }
+.pluto .moon:nth-child(1) { left: -10px; }
+.pluto .moon:nth-child(2) { left: -16px; }
+.pluto .moon:nth-child(3) { left: -22px; }
+.pluto .moon:nth-child(4) { left: -28px; }
+.pluto .moon:nth-child(5) { left: -34px; }
+
+/* Holographic orbital animation */
+@keyframes moonOrbit {
+    from { transform: rotate(0deg) translateY(-50%) translateX(0px) rotate(0deg); }
+    to { transform: rotate(360deg) translateY(-50%) translateX(0px) rotate(-360deg); }
+}
+
+/* Glow intensifies when parent planet is zoomed */
+.planet.zoomed .moon {
+    box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff80, 0 0 40px #00ffff60;
+    transform: scale(1.5);
+    transition: all 0.3s ease-out;
+}
+
+/* ================================
+   HOLOGRAPHIC SOLAR SYSTEM ADDITIONS
+   ================================ */
+
+/* --- MOONS --- */
+.moon {
+    position: absolute;
+    top: 50%;
+    left: -6px; /* Base left offset */
+    width: 6px;
+    height: 6px;
+    background: radial-gradient(circle, #aaffff, #00ffff);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff50, 0 0 30px #00ffff30;
+    transform: translateY(-50%);
+    animation: moonOrbit 8s linear infinite; /* default orbit speed */
+    z-index: 1;
+}
+
+/* --- MOON SPEED STAGGER --- */
+.planet .moon:nth-child(1) { animation-duration: 5s; }
+.planet .moon:nth-child(2) { animation-duration: 7s; }
+.planet .moon:nth-child(3) { animation-duration: 9s; }
+.planet .moon:nth-child(4) { animation-duration: 11s; }
+.planet .moon:nth-child(5) { animation-duration: 13s; }
+
+/* --- PLANET-SPECIFIC ORBITAL RADII --- */
+.earth .moon { left: -20px; } /* Earth: single Moon */
+.mars .moon:nth-child(1) { left: -14px; }
+.mars .moon:nth-child(2) { left: -22px; }
+
+.jupiter .moon:nth-child(1) { left: -20px; }
+.jupiter .moon:nth-child(2) { left: -28px; }
+.jupiter .moon:nth-child(3) { left: -36px; }
+.jupiter .moon:nth-child(4) { left: -44px; }
+
+.saturn .moon:nth-child(1) { left: -25px; }
+.saturn .moon:nth-child(2) { left: -35px; }
+.saturn .moon:nth-child(3) { left: -45px; }
+
+.uranus .moon:nth-child(1) { left: -18px; }
+.uranus .moon:nth-child(2) { left: -28px; }
+
+.neptune .moon:nth-child(1) { left: -20px; }
+
+.pluto .moon:nth-child(1) { left: -10px; }
+.pluto .moon:nth-child(2) { left: -16px; }
+.pluto .moon:nth-child(3) { left: -22px; }
+.pluto .moon:nth-child(4) { left: -28px; }
+.pluto .moon:nth-child(5) { left: -34px; }
+
+/* --- HOLOGRAPHIC ORBIT ANIMATION --- */
+@keyframes moonOrbit {
+    from { transform: rotate(0deg) translateY(-50%) translateX(0px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateY(-50%) translateX(0px) rotate(-360deg); }
+}
+
+/* --- GLOW INTENSITY ON PLANET ZOOM --- */
+.planet.zoomed .moon {
+    box-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff80, 0 0 40px #00ffff60;
+    transform: scale(1.5);
+    transition: all 0.3s ease-out;
+}
+
+/* --- ORBITAL TRAILS --- */
+.moon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    border: 1px dotted rgba(0,255,255,0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* --- PLANET CLICK ZOOM HOLOGRAM --- */
+.planet.zoomed {
+    box-shadow: 0 0 20px 5px rgba(0, 255, 255, 0.7), 0 0 40px 10px rgba(0,255,255,0.5);
+    border-radius: 50%;
+    cursor: zoom-out;
+    transition: all 0.3s ease-out;
+}
+
+/* --- PLANET INFO PANEL STYLE --- */
+#planet-info-panel.active {
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    backdrop-filter: blur(5px);
+    border: 1px solid cyan;
+    box-shadow: 0 0 20px rgba(0,255,255,0.5), 0 0 40px rgba(0,255,255,0.3);
+}
+
+/* --- EMP / Y2K38 EFFECTS --- */
+.glitch-active .planet,
+.glitch-active .moon {
+    animation: glitchAnim 0.1s infinite;
+    filter: hue-rotate(180deg);
+}
+
+.flash {
+    animation: flashScreen 0.3s;
+}
+
+@keyframes glitchAnim {
+    0%   { transform: translate(2px, -2px) rotate(0deg); }
+    25%  { transform: translate(-2px, 2px) rotate(1deg); }
+    50%  { transform: translate(2px, 2px) rotate(-1deg); }
+    75%  { transform: translate(-2px, -2px) rotate(0.5deg); }
+    100% { transform: translate(0,0) rotate(0deg); }
+}
+
+@keyframes flashScreen {
+    0% { background: white; }
+    100% { background: black; }
+}
+
+/* --- RESPONSIVE FOR DESKTOP & ANDROID --- */
+@media (max-width: 768px) {
+    .ui-panel { top: 10px; left: 10px; padding: 10px; font-size: 0.9em; }
+    .planet { width: calc(1.5vw + 8px); height: calc(1.5vw + 8px); }
+    .sun { width: calc(10vw); height: calc(10vw); }
+    .orbit { border-width: 0.5px; }
+    .moon { width: calc(1vw + 4px); height: calc(1vw + 4px); }
+}
+
+@media (min-width: 769px) {
+    .planet { width: calc(1vw + 10px); height: calc(1vw + 10px); }
+    .moon { width: 6px; height: 6px; }
+}
+
+/* ---------- Reset & Base Styles ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle at center, #000010, #000000);
+    overflow: hidden;
+    color: #00ffcc;
+    perspective: 1500px;
+}
+
+/* ---------- Stars Parallax ---------- */
+.stars-parallax {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+#stars-back, #stars-mid {
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background-repeat: repeat;
+    top: -50%;
+    left: -50%;
+    animation: starMove 200s linear infinite;
+}
+
+#stars-back {
+    background-image: radial-gradient(#005577 1px, transparent 2px);
+    animation-duration: 300s;
+    opacity: 0.3;
+}
+
+#stars-mid {
+    background-image: radial-gradient(#00ffcc 1px, transparent 2px);
+    animation-duration: 150s;
+    opacity: 0.6;
+}
+
+@keyframes starMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(-50%, -50%); }
+}
+
+/* ---------- UI Panel ---------- */
+.ui-panel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    background: rgba(0,20,30,0.6);
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+    padding: 15px;
+    z-index: 999;
+    color: #00ffcc;
+}
+
+.ui-panel h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+.ui-panel .data {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.ui-panel .controls button {
+    margin: 5px 3px 5px 0;
+    background: rgba(0,255,204,0.1);
+    border: 1px solid #00ffcc;
+    color: #00ffcc;
+    padding: 5px 8px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s;
+}
+
+.ui-panel .controls button:hover {
+    background: rgba(0,255,204,0.4);
+    box-shadow: 0 0 10px #00ffcc;
+}
+
+.audio-controls {
+    margin-top: 5px;
+}
+
+/* ---------- Solar System Container ---------- */
+.solar-system {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 1000px;
+}
+
+/* ---------- Sun ---------- */
+.sun {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    background: radial-gradient(circle, #ffff33, #ffcc00);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #ffff33, 0 0 100px #ffcc00;
+}
+
+/* ---------- Orbits ---------- */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(0,255,204,0.3);
+    border-radius: 50%;
+    transform-style: preserve-3d;
+}
+
+.mercury-orbit { width: 120px; height: 120px; margin-left: -60px; margin-top: -60px; }
+.venus-orbit   { width: 180px; height: 180px; margin-left: -90px; margin-top: -90px; }
+.earth-orbit   { width: 240px; height: 240px; margin-left: -120px; margin-top: -120px; }
+.mars-orbit    { width: 300px; height: 300px; margin-left: -150px; margin-top: -150px; }
+.jupiter-orbit { width: 400px; height: 400px; margin-left: -200px; margin-top: -200px; }
+.saturn-orbit  { width: 500px; height: 500px; margin-left: -250px; margin-top: -250px; }
+.uranus-orbit  { width: 600px; height: 600px; margin-left: -300px; margin-top: -300px; }
+.neptune-orbit { width: 700px; height: 700px; margin-left: -350px; margin-top: -350px; }
+.pluto-orbit   { width: 800px; height: 800px; margin-left: -400px; margin-top: -400px; }
+
+/* ---------- Planets ---------- */
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+.planet.mercury { width: 8px; height: 8px; margin:-4px; background:#A0A0A0; animation: orbit 10s linear infinite; }
+.planet.venus   { width: 14px; height: 14px; margin:-7px; background:#E0C060; animation: orbit 15s linear infinite; }
+.planet.earth   { width: 16px; height: 16px; margin:-8px; background:#6080E0; animation: orbit 20s linear infinite; }
+.planet.mars    { width: 12px; height: 12px; margin:-6px; background:#C04020; animation: orbit 25s linear infinite; }
+.planet.jupiter { width: 28px; height: 28px; margin:-14px; background:#D0A070; animation: orbit 35s linear infinite; }
+.planet.saturn  { width: 24px; height: 24px; margin:-12px; background:#E0D0B0; animation: orbit 45s linear infinite; }
+.planet.uranus  { width: 20px; height: 20px; margin:-10px; background:#A0E0E0; animation: orbit 55s linear infinite; }
+.planet.neptune { width: 18px; height: 18px; margin:-9px; background:#4060C0; animation: orbit 65s linear infinite; }
+.planet.pluto   { width: 10px; height: 10px; margin:-5px; background:#B08090; animation: orbit 75s linear infinite; }
+
+/* ---------- Moons ---------- */
+.moon {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00ffcc;
+    animation: moonOrbit 5s linear infinite;
+}
+
+.planet .moon:nth-child(1) { animation-duration: 6s; transform: translateX(20px); }
+.planet .moon:nth-child(2) { animation-duration: 8s; transform: translateX(25px); }
+.planet .moon:nth-child(3) { animation-duration: 10s; transform: translateX(30px); }
+.planet .moon:nth-child(4) { animation-duration: 12s; transform: translateX(35px); }
+.planet .moon:nth-child(5) { animation-duration: 14s; transform: translateX(40px); }
+
+@keyframes moonOrbit {
+    0% { transform: rotate(0deg) translateX(20px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(20px) rotate(-360deg); }
+}
+
+/* ---------- Hologram & Click Glitch Effect ---------- */
+body.glitch-active .solar-system .planet {
+    box-shadow: 0 0 30px #ff4d4d, 0 0 50px #ffff00 inset;
+    filter: hue-rotate(180deg) brightness(1.5);
+}
+
+.planet.zoomed {
+    box-shadow: 0 0 50px #00ffff, 0 0 100px #00ffcc inset;
+}
+
+/* ---------- Planet Info Panel ---------- */
+#planet-info-panel {
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 280px;
+    background: rgba(0,20,30,0.8);
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+    padding: 15px;
+    color: #00ffcc;
+    z-index: 1000;
+    display: none;
+}
+
+#planet-info-panel.active {
+    display: block;
+}
+
+#planet-info-panel h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00ffcc;
+}
+
+#planet-info-panel p {
+    font-size: 13px;
+    margin: 3px 0;
+}
+
+/* ---------- Planet Rings ---------- */
+.planet .rings {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    margin-top: -18px;
+    border: 2px solid #00ffcc;
+    border-radius: 50%;
+    transform: rotateX(60deg);
+    box-shadow: 0 0 15px #00ffcc;
+}
+
+/* ---------- Animations ---------- */
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(var(--orbit-radius, 100px)) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(var(--orbit-radius, 100px)) rotate(-360deg); }
+}
+
+/* ---------- Responsive ---------- */
+@media screen and (max-width: 768px) {
+    .solar-system { width: 700px; height: 700px; }
+    .sun { width: 80px; height: 80px; margin:-40px; }
+    .planet { transition: all 0.3s ease; }
+}
+
+/* ---------- Y2K38 EMP Glitch Flash ---------- */
+body.emp-flash .solar-system {
+    animation: empFlash 0.2s ease-in-out 1;
+}
+
+@keyframes empFlash {
+    0% {
+        filter: brightness(1) hue-rotate(0deg);
+        transform: scale(1) rotateY(0deg);
+    }
+    25% {
+        filter: brightness(3) hue-rotate(90deg);
+        transform: scale(1.05) rotateY(5deg);
+    }
+    50% {
+        filter: brightness(0.5) hue-rotate(180deg);
+        transform: scale(0.95) rotateY(-5deg);
+    }
+    75% {
+        filter: brightness(2) hue-rotate(270deg);
+        transform: scale(1.02) rotateY(3deg);
+    }
+    100% {
+        filter: brightness(1) hue-rotate(360deg);
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+/* ---------- Per-planet EMP flash ---------- */
+.planet.emp-flash,
+.planet.emp-flash .moon {
+    animation: empFlashPlanet 0.25s ease-in-out 1;
+}
+
+@keyframes empFlashPlanet {
+    0% {
+        filter: brightness(1) hue-rotate(0deg);
+        transform: scale(1) rotateY(0deg);
+    }
+    25% {
+        filter: brightness(3) hue-rotate(90deg);
+        transform: scale(1.15) rotateY(5deg);
+    }
+    50% {
+        filter: brightness(0.5) hue-rotate(180deg);
+        transform: scale(0.9) rotateY(-5deg);
+    }
+    75% {
+        filter: brightness(2) hue-rotate(270deg);
+        transform: scale(1.05) rotateY(3deg);
+    }
+    100% {
+        filter: brightness(1) hue-rotate(360deg);
+        transform: scale(1) rotateY(0deg);
+    }
+}
+
+/* Optional: make moons inherit EMP flash for better hologram effect */
+.planet.emp-flash .moon {
+    box-shadow: 0 0 10px 5px cyan, 0 0 15px 8px #00ffff;
+}
+
+/* ---------------- Planets Orbit ---------------- */
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(255,255,255,0.1); /* optional orbit line */
+    border-radius: 50%;
+    transform-origin: center center;
+    animation-timing-function: linear;
+}
+
+/* Example orbit sizes and speeds for planets */
+.mercury-orbit { width: 100px; height: 100px; animation: orbit-mercury 10s infinite linear; }
+.venus-orbit   { width: 140px; height: 140px; animation: orbit-venus 18s infinite linear; }
+.earth-orbit   { width: 180px; height: 180px; animation: orbit-earth 28s infinite linear; }
+.mars-orbit    { width: 220px; height: 220px; animation: orbit-mars 40s infinite linear; }
+.jupiter-orbit { width: 320px; height: 320px; animation: orbit-jupiter 80s infinite linear; }
+.saturn-orbit  { width: 400px; height: 400px; animation: orbit-saturn 120s infinite linear; }
+.uranus-orbit  { width: 480px; height: 480px; animation: orbit-uranus 160s infinite linear; }
+.neptune-orbit { width: 560px; height: 560px; animation: orbit-neptune 200s infinite linear; }
+.pluto-orbit   { width: 640px; height: 640px; animation: orbit-pluto 240s infinite linear; }
+
+/* Orbit Animations */
+@keyframes orbit-mercury { 100% { transform: rotate(360deg); } }
+@keyframes orbit-venus   { 100% { transform: rotate(360deg); } }
+@keyframes orbit-earth   { 100% { transform: rotate(360deg); } }
+@keyframes orbit-mars    { 100% { transform: rotate(360deg); } }
+@keyframes orbit-jupiter { 100% { transform: rotate(360deg); } }
+@keyframes orbit-saturn  { 100% { transform: rotate(360deg); } }
+@keyframes orbit-uranus  { 100% { transform: rotate(360deg); } }
+@keyframes orbit-neptune { 100% { transform: rotate(360deg); } }
+@keyframes orbit-pluto   { 100% { transform: rotate(360deg); } }
+
+/* ---------------- Moons Orbit Around Planets ---------------- */
+.planet .moon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: center center;
+    border-radius: 50%;
+}
+
+/* Example: Earth’s Moon */
+.earth .moon {
+    width: 12px;
+    height: 12px;
+    background: #ccc;
+    animation: orbit-moon-earth 4s infinite linear;
+}
+
+@keyframes orbit-moon-earth {
+    100% { transform: rotate(360deg) translateX(25px); } /* 25px radius from Earth */
+}
+
+/* Mars moons (Phobos & Deimos) */
+.mars .moon:nth-child(1) {
+    width: 6px;
+    height: 6px;
+    background: #999;
+    animation: orbit-moon-mars1 2s infinite linear;
+}
+.mars .moon:nth-child(2) {
+    width: 5px;
+    height: 5px;
+    background: #bbb;
+    animation: orbit-moon-mars2 3s infinite linear;
+}
+@keyframes orbit-moon-mars1 { 100% { transform: rotate(360deg) translateX(15px); } }
+@keyframes orbit-moon-mars2 { 100% { transform: rotate(360deg) translateX(22px); } }
+
+/* Pluto moons */
+.pluto .moon:nth-child(1) { animation: orbit-moon-pluto1 2s infinite linear; transform: translateX(10px); }
+.pluto .moon:nth-child(2) { animation: orbit-moon-pluto2 2.5s infinite linear; transform: translateX(14px); }
+.pluto .moon:nth-child(3) { animation: orbit-moon-pluto3 3s infinite linear; transform: translateX(18px); }
+.pluto .moon:nth-child(4) { animation: orbit-moon-pluto4 3.5s infinite linear; transform: translateX(22px); }
+.pluto .moon:nth-child(5) { animation: orbit-moon-pluto5 4s infinite linear; transform: translateX(26px); }
+
+@keyframes orbit-moon-pluto1 { 100% { transform: rotate(360deg) translateX(10px); } }
+@keyframes orbit-moon-pluto2 { 100% { transform: rotate(360deg) translateX(14px); } }
+@keyframes orbit-moon-pluto3 { 100% { transform: rotate(360deg) translateX(18px); } }
+@keyframes orbit-moon-pluto4 { 100% { transform: rotate(360deg) translateX(22px); } }
+@keyframes orbit-moon-pluto5 { 100% { transform: rotate(360deg) translateX(26px); } }
+
+/* ----------------------------- RESPONSIVE ----------------------------- */
+@media screen and (max-width: 768px) {
+    .solar-system { width: 700px; height: 700px; }
+    .orbit { border-width: 0.5px; }
+    .ui-panel { font-size: 0.9em; padding: 10px 15px; }
+}
+@media screen and (max-width: 480px) {
+    .solar-system { width: 400px; height: 400px; }
+    .sun { width: 40px; height: 40px; }
+    .planet { width: 6px; height: 6px; }
+}
+
+/* ----------------------------- RESPONSIVE MOONS ----------------------------- */
+@media screen and (max-width: 768px) {
+    .moon { width: 4px; height: 4px; }
+    .earth .moon { transform: rotate(0deg) translateX(15px); }
+    .mars .moon:nth-child(1) { transform: rotate(0deg) translateX(10px); }
+    .mars .moon:nth-child(2) { transform: rotate(0deg) translateX(14px); }
+    .pluto .moon { width: 1.5px; height: 1.5px; }
+}
+
+@media screen and (max-width: 480px) {
+    .moon { width: 2px; height: 2px; }
+    .earth .moon { transform: rotate(0deg) translateX(12px); }
+    .mars .moon:nth-child(1) { transform: rotate(0deg) translateX(8px); }
+    .mars .moon:nth-child(2) { transform: rotate(0deg) translateX(11px); }
+    .pluto .moon { width: 1px; height: 1px; }
+}
+
+/* ----------------------------- RESPONSIVE INFO PANEL ----------------------------- */
+@media screen and (max-width: 768px) {
+    #planet-info-panel { max-width: 260px; padding: 10px 14px; font-size: 0.85em; }
+}
+@media screen and (max-width: 480px) {
+    #planet-info-panel { max-width: 200px; padding: 8px 12px; font-size: 0.75em; }
+}
+
+/* ----------------------------- EMP FLASH RESPONSIVE ----------------------------- */
+@media screen and (max-width: 768px) {
+    body.emp-flash { animation: emp-flash 0.2s ease-in-out; }
+}
+@media screen and (max-width: 480px) {
+    body.emp-flash { animation: emp-flash 0.15s ease-in-out; }
