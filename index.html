@@ -2,24 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Full 64-Bit Solar System Simulation</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Y2K38 NASA-Style Holographic Solar System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- STAR BACKGROUND -->
     <div class="stars-parallax">
         <div id="stars-back"></div>
         <div id="stars-mid"></div>
     </div>
 
+    <!-- UI PANEL -->
     <div class="ui-panel">
         <h1>Solar System (64-Bit)</h1>
         <div class="data">TIMESTAMP: <span id="timestamp">0</span></div>
         <div class="data">DATE: <span id="date-display">Loading...</span></div>
         <div class="controls">
             <button onclick="jumpTo2038()">Jump to 2038</button>
-            <button id="glitch-btn" onclick="toggleGlitch()">Enable 32-bit Crash</button>
-            <button id="reset-view-btn">Reset View</button> 
-            
+            <button id="glitch-btn">Enable 32-bit Crash</button>
+            <button id="reset-view-btn">Reset View</button>
+
             <!-- Audio Controls -->
             <div class="audio-controls">
                 <button id="toggle-music-btn">Play Music</button>
@@ -29,34 +31,93 @@
         <p id="status-msg">Status: 64-bit Stable</p>
     </div>
 
+    <!-- SOLAR SYSTEM -->
     <div class="solar-system">
-        <div class="sun"></div>
-        
-        <!-- All 9 Orbits -->
-        <div class="orbit mercury-orbit"><div class="planet mercury" data-name="Mercury"></div></div>
-        <div class="orbit venus-orbit"><div class="planet venus" data-name="Venus"></div></div>
-        <div class="orbit earth-orbit"><div class="planet earth" data-name="Earth"></div></div>
-        <div class="orbit mars-orbit"><div class="planet mars" data-name="Mars"></div></div>
-        <div class="orbit jupiter-orbit"><div class="planet jupiter" data-name="Jupiter"></div></div>
-        <div class="orbit saturn-orbit"><div class="planet saturn" data-name="Saturn"><div class="rings"></div></div></div>
-        <div class="orbit uranus-orbit"><div class="planet uranus" data-name="Uranus"></div></div>
-        <div class="orbit neptune-orbit"><div class="planet neptune" data-name="Neptune"></div></div>
-        <div class="orbit pluto-orbit"><div class="planet pluto" data-name="Pluto"></div></div>
+        <div class="sun" data-name="Sun"></div>
+
+        <!-- MERCURY -->
+        <div class="orbit mercury-orbit">
+            <div class="planet mercury" data-name="Mercury"></div>
+        </div>
+
+        <!-- VENUS -->
+        <div class="orbit venus-orbit">
+            <div class="planet venus" data-name="Venus"></div>
+        </div>
+
+        <!-- EARTH + MOON -->
+        <div class="orbit earth-orbit">
+            <div class="planet earth" data-name="Earth">
+                <div class="moon" data-name="Moon"></div>
+            </div>
+        </div>
+
+        <!-- MARS + 2 MOONS -->
+        <div class="orbit mars-orbit">
+            <div class="planet mars" data-name="Mars">
+                <div class="moon" data-name="Phobos"></div>
+                <div class="moon" data-name="Deimos"></div>
+            </div>
+        </div>
+
+        <!-- JUPITER + 4 MOONS -->
+        <div class="orbit jupiter-orbit">
+            <div class="planet jupiter" data-name="Jupiter">
+                <div class="moon" data-name="Io"></div>
+                <div class="moon" data-name="Europa"></div>
+                <div class="moon" data-name="Ganymede"></div>
+                <div class="moon" data-name="Callisto"></div>
+            </div>
+        </div>
+
+        <!-- SATURN + 2 MOONS -->
+        <div class="orbit saturn-orbit">
+            <div class="planet saturn" data-name="Saturn">
+                <div class="rings"></div>
+                <div class="moon" data-name="Titan"></div>
+                <div class="moon" data-name="Rhea"></div>
+            </div>
+        </div>
+
+        <!-- URANUS + 2 MOONS -->
+        <div class="orbit uranus-orbit">
+            <div class="planet uranus" data-name="Uranus">
+                <div class="moon" data-name="Titania"></div>
+                <div class="moon" data-name="Oberon"></div>
+            </div>
+        </div>
+
+        <!-- NEPTUNE + 1 MOON -->
+        <div class="orbit neptune-orbit">
+            <div class="planet neptune" data-name="Neptune">
+                <div class="moon" data-name="Triton"></div>
+            </div>
+        </div>
+
+        <!-- PLUTO + 5 MOONS -->
+        <div class="orbit pluto-orbit">
+            <div class="planet pluto" data-name="Pluto">
+                <div class="moon" data-name="Charon"></div>
+                <div class="moon" data-name="Styx"></div>
+                <div class="moon" data-name="Nix"></div>
+                <div class="moon" data-name="Kerberos"></div>
+                <div class="moon" data-name="Hydra"></div>
+            </div>
+        </div>
     </div>
 
-    <!-- Planet Information Panel (from script2.js) -->
+    <!-- PLANET INFO PANEL -->
     <div id="planet-info-panel">
         <h2 id="info-planet-name"></h2>
-        <div id="info-planet-data"></div>
+        <p id="info-planet-description"></p>
         <button id="close-info-panel">Close</button>
     </div>
 
-    <!-- Include all your scripts in order -->
-    <script src="script.js"></script>
+    <!-- SCRIPT INCLUDES -->
+    <script src="script1.js"></script>
     <script src="script2.js"></script>
     <script src="script3.js"></script>
     <script src="script4.js"></script>
-    <script src="script5.js"></script> <!-- NEW: Include script5.js -->
+    <script src="script5.js"></script>
 </body>
 </html>
-
